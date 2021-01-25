@@ -1,0 +1,46 @@
+#hero {
+  @include background('../img/section/hero/background.jpg');
+}
+
+.hero {
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  &__foreground {
+    width: 100%;
+
+    margin-left: -60px;
+
+    @include breakpoint($breakpoint-computer) {
+      margin-left: 40px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-1 - 8;
+    line-height: 68px;
+
+    text-transform: uppercase;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-2 - 8;
+      line-height: 60px;
+    }
+
+    &--important {
+      color: $text-red;
+    }
+  }
+
+  &__description {
+    margin-bottom: 55px;
+
+    @include breakpoint($breakpoint-computer) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__button {
+
+  }
+}
