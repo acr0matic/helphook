@@ -18,3 +18,6 @@ $button-primary__active: #f9d6d4; // Эти переменные для обво
 $button-outline: #c8271d;
 $button-outline__hover: #df3429;
 $button-outline__active: #f9d6d4;
+
+@import 'button';
+@import 'button-outline';

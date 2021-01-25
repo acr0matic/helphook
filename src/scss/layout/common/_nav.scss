@@ -1,0 +1,32 @@
+.nav {
+  &__list {
+    @include flex();
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include breakpoint($breakpoint-computer) {
+        margin-right: 15px;
+      }
+    }
+
+    &:hover {
+      .nav__link {
+        color: $text-red;
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.15s ease;
+
+    font-size: $font-size-6;
+    font-weight: $weight-bold;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-8;
+    }
+  }
+}

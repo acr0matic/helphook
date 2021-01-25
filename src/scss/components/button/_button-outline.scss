@@ -1,0 +1,14 @@
+.button-outline {
+  color: $text-red;
+  border-color: $button-outline;
+
+  &:hover {
+    color: $text-white;
+    background-color: $button-outline__hover;
+    border-color: $button-outline__hover;
+  }
+
+  &:active {
+    border-color: $button-outline__active;
+  }
+}

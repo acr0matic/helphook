@@ -1,0 +1,70 @@
+.language {
+  margin-bottom: -43px;
+
+  &__container {
+    position: relative;
+    padding: 15px 30px 15px 15px;
+
+    border-radius: 12px;
+    transition: all 0.15s ease;
+
+    &--open {
+      background-color: $palette-white;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__item {
+    @include flex();
+    position: relative;
+
+    transition: all 0.15s ease;
+
+    &--hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      .language__title {
+        color: $text-red;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-weight: $weight-bold;
+    font-size: $font-size-6;
+
+    transition: color 0.15s ease;
+  }
+
+  &__control {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+
+    transition: transform 0.15s ease;
+    cursor: pointer;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+}

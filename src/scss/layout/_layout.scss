@@ -4,7 +4,9 @@
 
 // Общие фрагметы, которые встречаются на всех страницах
 @import "common/header";
+@import "common/nav";
 @import "common/footer";
+@import "common/other";
 
 // Фрагметы главной страницы
 @import "pages/main/section.scss";

@@ -1,3 +1,69 @@
 // -----------------------------------------------------------------------------
 // В этом файле прописываются все стили относящиеся к шапке сайта
 // -----------------------------------------------------------------------------
+
+.header {
+  @include flex();
+
+  padding-top: 20px;
+
+  &__logo {
+    max-width: 156px;
+
+    margin-right: 70px;
+
+    @include breakpoint($breakpoint-computer) {
+      max-width: 120px;
+
+      margin-right: 25px;
+    }
+  }
+
+  &__nav {
+    margin-right: 70px;
+
+    @include breakpoint($breakpoint-computer) {
+      margin-right: 25px;
+    }
+  }
+
+  &__social {
+    @include flex();
+  }
+
+  &__link {
+    @include breakpoint($breakpoint-computer) {
+      transform: scale(0.85);
+    }
+  }
+
+  &__icon {
+    path {
+      transition: all 0.15s ease;
+    }
+
+    &--instagram {
+      &:hover path {
+        fill: #c92627;
+      }
+    }
+
+    &--youtube {
+      &:hover path {
+        stroke: #c92627;
+      }
+    }
+  }
+
+  &__language {
+    margin-left: auto;
+    margin-right: 20px;
+
+    @include breakpoint($breakpoint-computer) {
+      margin-right: 15px;
+    }
+  }
+
+  &__button {
+  }
+}
