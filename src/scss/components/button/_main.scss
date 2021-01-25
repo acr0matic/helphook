@@ -2,3 +2,19 @@
 // В этом файле общие стили для компонента "кнопка"
 // и подключение дополнительных вариаций
 // -----------------------------------------------------------------------------
+
+$button-cta: #c8271d;
+$button-cta__hover: #df3429;
+$button-cta__active: #f9d6d4; // Эти переменные для обводки
+$button-cta__shadow: 0 54px 74px rgba(200, 39, 29, 0.15),
+  0 27.3375px 32.2594px rgba(200, 39, 29, 0.10125),
+  0 10.8px 12.025px rgba(200, 39, 29, 0.075),
+  0 2.3625px 4.27812px rgba(200, 39, 29, 0.04875);
+
+$button-primary: #c8271d;
+$button-primary__hover: #df3429;
+$button-primary__active: #f9d6d4; // Эти переменные для обводки
+
+$button-outline: #c8271d;
+$button-outline__hover: #df3429;
+$button-outline__active: #f9d6d4;
