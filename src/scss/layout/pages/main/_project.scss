@@ -1,0 +1,85 @@
+.project {
+  &__row:hover {
+    .project__animation {
+      animation-play-state: running;
+    }
+  }
+
+  &__image {
+    width: 100%;
+
+    g {
+      transition: all 0.15s ease;
+    }
+
+    #hand {
+      animation-iteration-count: infinite;
+
+      transform-origin: left bottom;
+    }
+  }
+
+  &__animation {
+    animation: 1s hand;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+  }
+
+  &__description {
+    font-size: 32px;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-4 - 2;
+    }
+
+    &::first-letter {
+      color: $text-red;
+
+      font-size: 64px;
+      font-family: Futuris, sans-serif;
+
+      @include breakpoint($breakpoint-computer) {
+        font-size: $font-size-2;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $text-red;
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+
+      width: 0%;
+      height: 2px;
+
+      background-color: #c92627;
+
+      transition: width 0.15s ease;
+    }
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
