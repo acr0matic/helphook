@@ -1,6 +1,10 @@
 .section {
   margin-bottom: 200px;
 
+  @include breakpoint($breakpoint-computer) {
+    margin-bottom: 160px;
+  }
+
   &__title {
     margin-bottom: 40px;
 
