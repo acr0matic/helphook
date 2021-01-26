@@ -1,0 +1,26 @@
+.map {
+  position: relative;
+
+  &__foreground {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    border-radius: 60px;
+  }
+
+  &__container {
+    position: relative;
+    height: 750px;
+
+    @include breakpoint($breakpoint-computer) {
+      height: 500px;
+    }
+  }
+}

@@ -60,6 +60,8 @@
 
   <!-- /Yandex.Metrika counter -->
 
+  <script src='https://api-maps.yandex.ru/2.1/?lang=ru_RU'></script>
+
   <!-- Стили -->
   <!-- build:css -->
   <link rel="stylesheet" href="css/style.css" />
@@ -175,6 +177,46 @@
           <!-- /.row -->
         </div>
         <!-- /.hero -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <section id="map" class="section">
+      <div class="container">
+        <div class="map">
+
+          <div class="row">
+            <div class="col-7">
+              <h2 class="section__title mb-3">Карта помощи</h2>
+              <p class="section__description mb-5">
+                В рамках проекта предусмотрено создание и размещение
+                <br>
+                конструкций с крючками на которых каждый сможет поделиться
+                <br>
+                любой помощью, которая выручит в непростой жизненной ситуации.
+              </p>
+            </div>
+            <!-- /.col-7 -->
+
+            <div class="col-5">
+              <div class="map__foreground">
+                <img src="img/section/map/foreground.jpg" alt="" class="map__image">
+              </div>
+              <!-- /.map__foreground -->
+            </div>
+            <!-- /.col-5 -->
+
+            <div class="col-12">
+              <div id="yandexMap" class="map__container">
+
+              </div>
+              <!-- /.map__container -->
+            </div>
+            <!-- /.col-12 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.map -->
       </div>
       <!-- /.container -->
     </section>
