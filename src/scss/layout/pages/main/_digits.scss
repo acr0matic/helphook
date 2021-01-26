@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// Фрагмент стилизации секции "Проект в цифрах"
+// -----------------------------------------------------------------------------
+
+.digits {
+  margin-top: 100px;
+
+  &__number {
+    position: relative;
+
+    margin-bottom: 90px;
+
+    font-weight: $weight-bold;
+    font-size: $font-size-0;
+
+    font-family: Futuris, sans-serif;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-1 + 20;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -25px;
+      left: -32px;
+
+      width: 123px;
+      height: 123px;
+
+      background-color: #fad3d0;
+
+      border-radius: 50%;
+
+      @include breakpoint($breakpoint-computer) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-3;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-4;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-4;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-6;
+    }
+  }
+}
