@@ -56,9 +56,14 @@
   }
 
   &__control {
+    @include flex($justify: center);
+
     position: absolute;
-    top: 25px;
-    right: 10px;
+    top: 20px;
+    right: 5px;
+
+    width: 20px;
+    height: 20px;
 
     transition: transform 0.15s ease;
     cursor: pointer;
