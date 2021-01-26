@@ -9,3 +9,6 @@ $input-field__hover: #fcfcfc;
 // Переменные для обводки инпутов
 $input-field__active: #000000;
 $input-field__error: #c92627;
+
+@import "input";
+@import "input-field";

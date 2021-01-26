@@ -1,0 +1,21 @@
+.button-primary {
+  color: $text-white;
+  background-color: $button-primary;
+
+  @include breakpoint($breakpoint-computer) {
+    min-width: 180px;
+    padding: 15px 20px;
+
+    font-size: $font-size-8;
+  }
+
+  &:hover {
+    color: $text-white;
+    background-color: $button-primary__hover;
+    border-color: $button-primary__hover;
+  }
+
+  &:active {
+    border-color: $button-primary__active;
+  }
+}

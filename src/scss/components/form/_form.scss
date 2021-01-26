@@ -1,0 +1,14 @@
+.form {
+  &__info {
+    font-size: $font-size-5;
+    transition: color 0.15s ease;
+
+    &--error {
+      color: $text-red;
+    }
+
+    &--accept {
+      color: $text-green;
+    }
+  }
+}

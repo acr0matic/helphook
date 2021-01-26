@@ -1,0 +1,44 @@
+.input-field {
+  border-radius: 60px;
+  border: 2px solid transparent;
+
+  padding: 35px;
+
+  background-color: $input-field;
+  font-size: $font-size-5;
+
+  transition: all 0.15s ease;
+
+  @include breakpoint($breakpoint-computer) {
+    padding: 20px 35px;
+    font-size: $font-size-7;
+  }
+
+  &:hover {
+    background-color: $input-field__hover;
+  }
+
+  &:focus {
+    border: 2px solid $input-field__active;
+  }
+
+  &::placeholder {
+    color: $text-gray;
+    font-size: $font-size-5;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-7;
+    }
+  }
+
+  &--area {
+    min-height: 280px;
+
+    padding: 35px;
+    resize: vertical;
+  }
+
+  &--error {
+    border: 2px solid $input-field__error;
+  }
+}
