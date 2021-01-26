@@ -1,5 +1,7 @@
 #hero {
   @include background('../img/section/hero/background.jpg');
+
+  margin-bottom: 60px;
 }
 
 .hero {

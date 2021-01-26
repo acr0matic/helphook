@@ -1,0 +1,31 @@
+.team {
+  &__card {
+    margin-bottom: 90px;
+
+    @include breakpoint($breakpoint-computer) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    border-radius: 60px;
+
+    transition: opacity 0.15s ease;
+  }
+
+  a:hover &__photo {
+    opacity: 0.7;
+  }
+
+  &__name {
+  }
+
+  &__link {
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $text-red;
+    }
+  }
+}
