@@ -4,6 +4,7 @@
 
 .partners {
   @include flex($justify: center);
+  margin-top: 60px;
 
   &__logo {
     margin: 0 45px;
