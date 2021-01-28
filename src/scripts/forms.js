@@ -36,7 +36,11 @@ forms.forEach(form => {
       try {
         let result = await response.json();
 
-        formMessage.innerHTML = 'Спасибо за отклик! Скоро свяжемся с вами!';
+        if (/en/.test(window.location.href))
+          formMessage.innerHTML = 'Thanks for the response interest to our project! We will contact you asap';
+        else
+          formMessage.innerHTML = 'Спасибо за отклик! Скоро свяжемся с вами!';
+
         formMessage.classList.add('form__info--show', 'form__info--accept');
 
         ClearForm(requiredFields);
@@ -48,7 +52,11 @@ forms.forEach(form => {
     }
 
     else {
-      formMessage.innerHTML = 'Вы ошиблись при вводе! Попробуйте снова.'
+      if (/en/.test(window.location.href))
+        formMessage.innerHTML = 'You entered a mistake! Please, try again.'
+      else
+        formMessage.innerHTML = 'Вы ошиблись при вводе! Попробуйте снова.'
+
       formMessage.classList.add('form__info--show', 'form__info--error');
     }
   };
