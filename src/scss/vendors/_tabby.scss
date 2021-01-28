@@ -1,0 +1,49 @@
+/*! tabbyjs v12.0.3 | (c) 2019 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/tabby */
+[role="tablist"] {
+  display: flex;
+  justify-content: space-around;
+
+  list-style: none;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+[role="tablist"] * {
+  box-sizing: border-box;
+}
+
+[role="presentation"] {
+  width: 50%;
+}
+
+[role="tab"] {
+  display: block;
+  border-bottom: 2px solid #1B1616;
+  outline: none;
+
+  padding: 1em;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-size: $font-size-4;
+
+  transition: all 0.15s ease;
+
+  @include breakpoint($breakpoint-computer) {
+    font-size: $font-size-6;
+  }
+}
+
+[role="tab"][aria-selected="true"] {
+  color: $text-red;
+  border-bottom-color: #c92627;
+}
+
+[role="tab"]:hover:not([aria-selected="true"]) {
+  color: $text-red;
+}
+
+[role="tabpanel"] {
+  transition: all 0.15s ease;
+}

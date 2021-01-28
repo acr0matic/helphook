@@ -708,6 +708,131 @@
       <!-- /.container -->
     </section>
 
+    <section id="support" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <h2 class="section__title mb-3">Поддержка проекта</h2>
+            <p class="section__description mb-5">Если вы хотите стать волонтером проекта или оказать любую <br> поддержку, свяжитесь с нашей командой.</p>
+          </div>
+          <!-- /.col-7 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="support">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <img src="img/section/support/foreground.svg" alt="" class="support__foreground">
+            </div>
+            <!-- /.col-6 -->
+
+            <div class="col-6">
+              <ul data-tabs>
+                <li><a data-tabby-default href="#harry">Стать волонтером</a></li>
+                <li><a href="#hermione">Любая помощь</a></li>
+              </ul>
+
+              <div class="r" id="harry">
+                <form class="form" action="" method="POST">
+                  <div class="row">
+                    <div class="col-12 mb-4">
+                      <input class="input input-field" type="text" name="user_name" placeholder="ФИО">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-8 mb-4">
+                      <input class="input input-field input-field--error" type="email" name="user_email" placeholder="Email">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-4 mb-4">
+                      <input class="input input-field" type="email" name="user_email" placeholder="Возраст">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-12 mb-5">
+                      <div class="select">
+                        <div class="select__wrapper">
+                          <ul class="select__list">
+                            <li class="select__item select__item--default">Занятость</li>
+                            <li class="select__item select__item--hide">Учусь в школе</li>
+                            <li class="select__item select__item--hide">Обучаюсь в университете</li>
+                            <li class="select__item select__item--hide">Работаю</li>
+                            <li class="select__item select__item--hide">Не имею постоянной работы</li>
+                          </ul>
+
+                          <img src="img/icons/control/select__arrow--gray.svg" alt="" class="select__arrow">
+                        </div>
+                        <!-- /.select__background -->
+                      </div>
+                      <!-- /.select -->
+                    </div>
+                    <!-- /.col-12 -->
+                  </div>
+                  <!-- /.row -->
+
+                  <button class="button button-primary mb-4">Отправить</button>
+
+                  <div class="form__info form__info--error">Вы ошиблись при вводе! Попробуйте снова!</div>
+                  <!-- /.form__info -->
+                </form>
+              </div>
+
+              <div role="tab-item" id="hermione">
+                <form class="form" action="" method="POST">
+                  <div class="row">
+                    <div class="col-12 mb-4">
+                      <input class="input input-field" type="text" name="user_name" placeholder="ФИО">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-8 mb-4">
+                      <input class="input input-field" type="email" name="user_email" placeholder="Email">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-4 mb-4">
+                      <input class="input input-field" type="email" name="user_email" placeholder="Возраст">
+                    </div>
+                    <!-- /.col-12 -->
+
+                    <div class="col-12 mb-5">
+                      <div class="select">
+                        <div class="select__wrapper">
+                          <ul class="select__list">
+                            <li class="select__item select__item--default">Как вы можете помочь</li>
+                            <li class="select__item select__item--hide">Учусь в школе</li>
+                            <li class="select__item select__item--hide">Обучаюсь в университете</li>
+                            <li class="select__item select__item--hide">Работаю</li>
+                            <li class="select__item select__item--hide">Не имею постоянной работы</li>
+                          </ul>
+
+                          <img src="img/icons/control/select__arrow--gray.svg" alt="" class="select__arrow">
+                        </div>
+                        <!-- /.select__background -->
+                      </div>
+                      <!-- /.select -->
+                    </div>
+                    <!-- /.col-12 -->
+                  </div>
+                  <!-- /.row -->
+
+                  <button class="button button-primary mb-4">Отправить</button>
+
+                  <div class="form__info form__info--error">Вы ошиблись при вводе! Попробуйте снова!</div>
+                  <!-- /.form__info -->
+                </form>
+              </div>
+            </div>
+            <!-- /.col-6 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.support -->
+      </div>
+      <!-- /.container -->
+    </section>
+
     <section id="team" class="section">
       <div class="container">
         <h2 class="section__title section__title--center">Наша команда</h2>
@@ -911,6 +1036,9 @@
   <footer></footer>
 
   <!-- Скрипты -->
+  <script src="scripts/libraries/tabby.js"></script>
+  <script src="scripts/libraries/handorgel.js"></script>
+
   <!-- build:js -->
   <script src="scripts/script.js"></script>
   <!-- endbuild -->
