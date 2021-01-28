@@ -7,12 +7,29 @@
       font-size: $font-size-6;
     }
 
+    @include breakpoint($breakpoint-tablet-large) {
+      font-size: 12px;
+
+      text-align: center;
+    }
+
     &--error {
       color: $text-red;
     }
 
     &--accept {
       color: $text-green;
+    }
+  }
+
+  .button {
+    @include breakpoint($breakpoint-mobile-large) {
+      display: block;
+
+      width: 100%;
+      max-width: 288px;
+
+      margin: 0 auto;
     }
   }
 }

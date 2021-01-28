@@ -14,6 +14,11 @@
     font-size: $font-size-7;
   }
 
+  @include breakpoint($breakpoint-mobile-large) {
+    padding: 18px 15px;
+    font-size: 12px;
+  }
+
   &:hover {
     background-color: $input-field__hover;
   }
@@ -29,6 +34,10 @@
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-7;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: 12px;
+    }
   }
 
   &--area {
@@ -36,6 +45,13 @@
 
     padding: 35px;
     resize: vertical;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      min-height: 140px;
+
+      border-radius: 12px;
+      padding: 15px;
+    }
   }
 
   &--error {

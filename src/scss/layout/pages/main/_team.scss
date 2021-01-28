@@ -16,6 +16,10 @@
     border-radius: 60px;
 
     transition: opacity 0.15s ease;
+
+    @include breakpoint($breakpoint-tablet) {
+      border-radius: 20px;
+    }
   }
 
   a:hover &__photo {
@@ -32,10 +36,20 @@
       font-size: $font-size-8;
       line-height: 24px;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-9;
+      line-height: 20px;
+    }
   }
 
   &__link {
     transition: color 0.15s ease;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-10;
+      line-height: 20px;
+    }
 
     &:hover {
       color: $text-red;

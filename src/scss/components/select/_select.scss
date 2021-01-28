@@ -12,6 +12,10 @@
     font-size: $font-size-7;
   }
 
+  @include breakpoint($breakpoint-mobile-large) {
+    font-size: 12px;
+  }
+
   &:hover &__list {
     background-color: $input-field__hover;
   }
@@ -49,6 +53,11 @@
 
     background-color: $input-field;
     transition: background-color 0.15s ease;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      border-radius: 30px;
+      padding: 0 15px;
+    }
   }
 
   &__item {

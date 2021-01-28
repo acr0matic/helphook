@@ -1,5 +1,5 @@
 .project {
-  @include background('../img/section/project/background.jpg');
+  @include background("../img/section/project/background.jpg");
   background-position: top right;
   background-size: 55% 65%;
 
@@ -53,6 +53,12 @@
       font-size: $font-size-5;
     }
 
+    @include breakpoint($breakpoint-mobile-large) {
+      font-size: $font-size-8;
+
+      margin-bottom: 15px;
+    }
+
     &::first-letter {
       color: $text-red;
 
@@ -61,6 +67,10 @@
 
       @include breakpoint($breakpoint-computer) {
         font-size: $font-size-2;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
+        font-size: $font-size-3;
       }
     }
   }

@@ -5,6 +5,19 @@
 .digits {
   margin-top: 100px;
 
+  @include breakpoint($breakpoint-mobile-large) {
+    text-align: center;
+  }
+
+  &__item {
+    @include breakpoint($breakpoint-tablet-large) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   &__number {
     position: relative;
 
@@ -51,6 +64,9 @@
       @include breakpoint($breakpoint-laptop) {
         width: 80px;
         height: 80px;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
       }
     }
   }

@@ -20,6 +20,10 @@
       max-width: 220px;
       border-radius: 12px;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      max-width: 120px;
+    }
   }
 
   &__container {
@@ -31,6 +35,10 @@
 
     @include breakpoint($breakpoint-computer) {
       height: 500px;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      height: 220px;
     }
   }
 }

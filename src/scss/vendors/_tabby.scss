@@ -1,6 +1,7 @@
 /*! tabbyjs v12.0.3 | (c) 2019 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/tabby */
 [role="tablist"] {
   display: flex;
+  align-items: flex-end;
   justify-content: space-around;
 
   list-style: none;
@@ -32,6 +33,10 @@
 
   @include breakpoint($breakpoint-computer) {
     font-size: $font-size-6;
+  }
+
+  @include breakpoint($breakpoint-mobile-large) {
+    font-size: $font-size-8;
   }
 }
 

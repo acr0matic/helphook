@@ -27,6 +27,10 @@
       max-width: 70px;
       margin-right: 49px;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      margin: 0 auto;
+    }
   }
 
   &__nav {
@@ -76,11 +80,26 @@
     @include breakpoint($breakpoint-computer) {
       margin-right: 15px;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      display: none;
+    }
   }
 
   &__button {
     @include breakpoint($breakpoint-tablet-large) {
       display: none;
+    }
+  }
+
+  &__mobile {
+    position: absolute;
+    right: 15px;
+
+    display: none;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      display: block;
     }
   }
 }

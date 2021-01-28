@@ -8,6 +8,10 @@
 
   background-color: $palette-gray;
 
+  @include breakpoint($breakpoint-mobile-large) {
+    padding-bottom: 30px;
+  }
+
   &__wrapper {
     display: flex;
 
@@ -29,6 +33,10 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -37,6 +45,10 @@
 
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-6;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      margin-bottom: 25px;
     }
   }
 
@@ -52,6 +64,10 @@
       display: flex;
       justify-content: center;
     }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      margin-left: -10px;
+    }
   }
 
   &__link {
@@ -63,6 +79,10 @@
 
       @include breakpoint($breakpoint-tablet-large) {
         margin-bottom: 20px;
+      }
+
+      @include breakpoint($breakpoint-mobile-large) {
+        margin-bottom: 0;
       }
     }
 
@@ -106,6 +126,10 @@
       transform: scale(0.8);
     }
 
+    @include breakpoint($breakpoint-mobile-large) {
+      transform: scale(0.6);
+    }
+
     rect,
     circle,
     path {
@@ -118,6 +142,10 @@
 
     @include breakpoint($breakpoint-tablet) {
       margin-left: 0;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      margin: 30px auto 0 auto;
     }
   }
 
