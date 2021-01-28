@@ -11,7 +11,7 @@ select.forEach(selectItem => {
 
     hiddenItems.forEach(item => {
       item.addEventListener('click', () => {
-        defaultItem.remove();
+        defaultItem.style.display = 'none';
         ResetSelect(selectItem);
         item.classList.add('select__item--selected');
       });

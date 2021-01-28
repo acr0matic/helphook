@@ -1,7 +1,10 @@
 .form {
   &__info {
     font-size: $font-size-5;
-    transition: color 0.15s ease;
+    transition: all 0.15s ease;
+
+    opacity: 0;
+    visibility: hidden;
 
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-6;
@@ -11,6 +14,11 @@
       font-size: 12px;
 
       text-align: center;
+    }
+
+    &--show {
+      opacity: 1;
+      visibility: visible;
     }
 
     &--error {
