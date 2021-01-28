@@ -2,13 +2,6 @@
 // В этом файле прописываются все стили относящиеся к шапке сайта
 // -----------------------------------------------------------------------------
 
-body {
-  @include breakpoint($breakpoint-mobile-large) {
-    position: relative;
-    overflow-x: hidden;
-  }
-}
-
 .header {
   @include flex();
 

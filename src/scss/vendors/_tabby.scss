@@ -5,7 +5,6 @@
   justify-content: space-around;
 
   list-style: none;
-  margin-bottom: 60px;
   padding: 0;
 }
 
@@ -50,5 +49,6 @@
 }
 
 [role="tabpanel"] {
+  padding-top: 60px;
   transition: all 0.15s ease;
 }

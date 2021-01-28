@@ -1,18 +1,13 @@
 .mobile-menu {
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   top: 32px;
   right: 0;
 
-  visibility: hidden;
-  opacity: 0;
-
   transform: translateX(100%);
-  transition: all 0.3s ease;
+  transition: transform 0.5s ease;
 
   &--open {
-    visibility: visible;
-    opacity: 1;
-
     transform: translateX(0);
   }
 
@@ -63,8 +58,11 @@
 
     &::after {
       content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
       display: block;
-      width: 20px;
+      width: 45px;
       height: 100%;
     }
   }

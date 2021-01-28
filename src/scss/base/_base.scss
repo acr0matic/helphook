@@ -7,13 +7,12 @@
  */
 html {
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 
 body {
-  @include breakpoint($breakpoint-mobile-large) {
-    position: relative;
-    overflow-x: hidden;
-  }
+  position: relative;
+  overflow-x: hidden;
 }
 
 /**
