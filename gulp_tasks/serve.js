@@ -7,7 +7,7 @@ const { reload } = browserSync;
 
 gulp.task('serve', () => {
   browserSync.init({
-    server: './src/',
+    proxy: 'http://helphook.ru/src/',
     port: 4000,
     notify: false,
   });

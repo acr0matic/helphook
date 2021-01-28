@@ -28,11 +28,23 @@ forms.forEach(form => {
       formData.append('user_select', selectedValue);
       formData.append('form_type', formType);
 
-      for (var pair of formData.entries()) {
-        console.log(pair[0] + ', ' + pair[1]);
+      let response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+      });
+
+      try {
+        let result = await response.json();
+
+        formMessage.innerHTML = 'Спасибо за отклик! Скоро свяжемся с вами!';
+        formMessage.classList.add('form__info--show', 'form__info--accept');
+
+        ClearForm(requiredFields);
       }
 
-      ClearForm(requiredFields);
+      catch {
+        console.error('Ошибка на стороне сервера');
+      }
     }
 
     else {
