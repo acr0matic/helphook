@@ -20,6 +20,11 @@
       margin-bottom: 60px;
     }
 
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-1;
+      margin-bottom: 45px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -38,6 +43,11 @@
         width: 100px;
         height: 100px;
       }
+
+      @include breakpoint($breakpoint-laptop) {
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 
@@ -54,6 +64,12 @@
 
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-6;
+    }
+
+    @include breakpoint($breakpoint-laptop) {
+      br {
+        display: none;
+      }
     }
   }
 }

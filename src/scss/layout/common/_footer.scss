@@ -101,12 +101,18 @@
     margin-bottom: 40px;
 
     @include breakpoint($breakpoint-computer) {
-      width: 185px;
+      max-width: 185px;
+    }
+
+    @include breakpoint($breakpoint-computer) {
+      max-width: 140px;
     }
   }
 
   &__company {
     font-size: $font-size-4;
+
+    white-space: nowrap;
 
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-6;

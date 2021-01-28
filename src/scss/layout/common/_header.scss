@@ -7,6 +7,11 @@
 
   padding-top: 20px;
 
+  @include breakpoint($breakpoint-laptop) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   &__logo {
     max-width: 156px;
 
@@ -17,7 +22,13 @@
 
       margin-right: 25px;
     }
+
+    @include breakpoint($breakpoint-laptop) {
+      max-width: 70px;
+      margin-right: 49px;
+    }
   }
+
 
   &__nav {
     margin-right: 70px;
@@ -34,6 +45,10 @@
   &__link {
     @include breakpoint($breakpoint-computer) {
       transform: scale(0.85);
+    }
+
+    @include breakpoint($breakpoint-laptop) {
+      display: none;
     }
   }
 

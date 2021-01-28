@@ -28,5 +28,9 @@
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-8;
     }
+
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-9;
+    }
   }
 }

@@ -23,6 +23,10 @@
   }
 
   &__name {
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-7;
+      line-height: 28px;
+    }
   }
 
   &__link {

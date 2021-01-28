@@ -3,6 +3,10 @@
     font-size: $font-size-5;
     transition: color 0.15s ease;
 
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-6;
+    }
+
     &--error {
       color: $text-red;
     }

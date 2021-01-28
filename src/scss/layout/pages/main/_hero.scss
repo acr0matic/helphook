@@ -33,6 +33,11 @@
       line-height: 60px;
     }
 
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-3;
+      line-height: 49px;
+    }
+
     &--important {
       color: $text-red;
     }

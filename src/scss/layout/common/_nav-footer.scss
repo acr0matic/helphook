@@ -9,6 +9,10 @@
 
     @include between(1, 4) {
       margin-bottom: 50px;
+
+      @include breakpoint($breakpoint-computer) {
+        margin-bottom: 28px;
+      }
     }
 
     &:hover {
@@ -21,7 +25,6 @@
   &__link {
     font-size: $font-size-5;
     transition: color 0.15s ease;
-
 
     @include breakpoint($breakpoint-computer) {
       font-size: $font-size-6;

@@ -35,5 +35,10 @@
         display: none;
       }
     }
+
+    @include breakpoint($breakpoint-laptop) {
+      font-size: $font-size-7;
+      line-height: 28px;
+    }
   }
 }
