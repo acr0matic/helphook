@@ -27,6 +27,11 @@
       font-size: $font-size-7;
       line-height: 28px;
     }
+
+    @include breakpoint($breakpoint-tablet-large) {
+      font-size: $font-size-8;
+      line-height: 24px;
+    }
   }
 
   &__link {

@@ -7,6 +7,10 @@
     background-size: 60% 60%;
   }
 
+  @include breakpoint($breakpoint-tablet-large) {
+    background: none;
+  }
+
   &__row:hover {
     .project__animation {
       animation-play-state: running;
@@ -14,7 +18,12 @@
   }
 
   &__image {
+    display: block;
     width: 100%;
+
+    @include breakpoint($breakpoint-tablet-large) {
+      max-width: 400px;
+    }
 
     g {
       transition: all 0.15s ease;

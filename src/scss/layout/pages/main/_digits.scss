@@ -25,6 +25,10 @@
       margin-bottom: 45px;
     }
 
+    @include breakpoint($breakpoint-tablet-large) {
+      margin-bottom: 30px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -70,6 +74,10 @@
       br {
         display: none;
       }
+    }
+
+    @include breakpoint($breakpoint-tablet-large) {
+      margin-bottom: 60px;
     }
   }
 }

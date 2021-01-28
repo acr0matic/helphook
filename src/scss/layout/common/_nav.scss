@@ -1,6 +1,10 @@
 .nav {
   &__list {
     @include flex();
+
+    @include breakpoint($breakpoint-tablet-large) {
+      display: none;
+    }
   }
 
   &__item {

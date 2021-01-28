@@ -1,5 +1,9 @@
 .question {
   &__image {
     width: 100%;
+
+    @include breakpoint($breakpoint-tablet-large) {
+      display: none;
+    }
   }
 }

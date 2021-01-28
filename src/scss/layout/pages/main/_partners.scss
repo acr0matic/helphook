@@ -11,5 +11,12 @@
   }
 
   &__image {
+    @include breakpoint($breakpoint-tablet-large) {
+      max-width: 200px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 150px;
+    }
   }
 }

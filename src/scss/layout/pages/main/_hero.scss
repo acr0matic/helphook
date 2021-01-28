@@ -3,9 +3,13 @@
 // -----------------------------------------------------------------------------
 
 #hero {
-  @include background('../img/section/hero/background.jpg');
+  @include background("../img/section/hero/background.jpg");
 
   margin-bottom: 60px;
+
+  @include breakpoint($breakpoint-tablet-large) {
+    background: none;
+  }
 }
 
 .hero {
@@ -19,6 +23,22 @@
 
     @include breakpoint($breakpoint-computer) {
       margin-left: 40px;
+    }
+
+    &--desktop {
+      @include breakpoint($breakpoint-tablet-large) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      max-width: 400px;
+
+      @include breakpoint($breakpoint-tablet-large) {
+        display: block;
+      }
     }
   }
 
@@ -52,6 +72,18 @@
   }
 
   &__button {
+    &--mobile {
+      display: none;
 
+      @include breakpoint($breakpoint-tablet-large) {
+        display: block;
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet-large) {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 16px;
+    }
   }
 }

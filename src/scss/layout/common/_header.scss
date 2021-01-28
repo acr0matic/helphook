@@ -29,7 +29,6 @@
     }
   }
 
-
   &__nav {
     margin-right: 70px;
 
@@ -80,5 +79,8 @@
   }
 
   &__button {
+    @include breakpoint($breakpoint-tablet-large) {
+      display: none;
+    }
   }
 }
