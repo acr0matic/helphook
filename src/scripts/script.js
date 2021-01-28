@@ -1,5 +1,18 @@
-const languageSwitcher = document.getElementById('languageSwitcher');
-const languageComponent = document.getElementById('languageComponent');
+const languageComponent = document.querySelectorAll('.language');
+
+languageComponent.forEach(component => {
+  const languageSwitcher = component.querySelector('.language__control');
+
+  languageSwitcher.addEventListener('click', () => {
+    const items = component.querySelectorAll('.language__item--hide');
+    const container = component.querySelector('.language__container');
+
+    items.forEach(item => item.classList.toggle('language__item--visible'));
+
+    container.classList.toggle('language__container--open');
+    languageSwitcher.classList.toggle('language__control--open')
+  });
+});
 
 languageSwitcher.addEventListener('click', () => {
   const items = languageComponent.querySelectorAll('.language__item--hide');
@@ -116,3 +129,15 @@ function ResetSelect(select) {
   const selected = select.querySelector('.select__item--selected');
   if (selected) selected.classList.remove('select__item--selected');
 }
+
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuOpen = document.querySelector('.header__mobile-button');
+const mobileMenuClose = mobileMenu.querySelector('.mobile-menu__close');
+
+mobileMenuOpen.addEventListener('click', () => {
+  mobileMenu.classList.toggle('mobile-menu--open')
+});
+
+mobileMenuClose.addEventListener('touchend', () => {
+  mobileMenu.classList.toggle('mobile-menu--open')
+});

@@ -9,6 +9,13 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  @include breakpoint($breakpoint-mobile-large) {
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
 /**
    * Наследуем всем элементам свойство border-box от родителя (html)
    * Так как селектор * имеет 0 приоритет, он не переопределяет стили html
