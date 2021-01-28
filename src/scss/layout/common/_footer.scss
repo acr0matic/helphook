@@ -1,3 +1,115 @@
 // -----------------------------------------------------------------------------
 // В этом файле прописываются все стили относящиеся к подвалу сайта
 // -----------------------------------------------------------------------------
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 90px;
+
+  background-color: $palette-gray;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__section {
+    width: 530px;
+
+    @include breakpoint($breakpoint-computer) {
+      width: 330px;
+      margin-right: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: $font-size-5;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-6;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 40px;
+
+    &--phone {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      color: $text-red;
+
+      .footer__icon--instagram path {
+        fill: #c92627;
+      }
+
+      .footer__icon--phone {
+        rect {
+          stroke: #c92627;
+        }
+
+        circle {
+          fill: #c92627;
+        }
+
+        path {
+          fill: #c92627;
+        }
+      }
+    }
+
+    span {
+      font-size: $font-size-5;
+
+      @include breakpoint($breakpoint-computer) {
+        font-size: $font-size-6;
+      }
+    }
+  }
+
+  &__icon {
+    rect,
+    circle,
+    path {
+      transition: all 0.15s ease;
+    }
+  }
+
+  &__copyright {
+    margin-left: auto;
+  }
+
+  &__logo {
+    width: 235px;
+
+    margin-bottom: 40px;
+
+    @include breakpoint($breakpoint-computer) {
+      width: 185px;
+    }
+  }
+
+  &__company {
+    font-size: $font-size-4;
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-6;
+    }
+  }
+}

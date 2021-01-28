@@ -1,0 +1,30 @@
+.nav-footer {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+
+    @include between(1, 4) {
+      margin-bottom: 50px;
+    }
+
+    &:hover {
+      a {
+        color: $text-red;
+      }
+    }
+  }
+
+  &__link {
+    font-size: $font-size-5;
+    transition: color 0.15s ease;
+
+
+    @include breakpoint($breakpoint-computer) {
+      font-size: $font-size-6;
+    }
+  }
+}
