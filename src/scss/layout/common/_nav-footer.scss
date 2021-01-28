@@ -2,6 +2,10 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -13,6 +17,14 @@
       @include breakpoint($breakpoint-computer) {
         margin-bottom: 28px;
       }
+
+      @include breakpoint($breakpoint-tablet) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 15px;
     }
 
     &:hover {

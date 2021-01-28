@@ -13,6 +13,13 @@
 
     width: 100%;
     border-radius: 60px;
+
+    @include breakpoint($breakpoint-tablet) {
+      top: -30px;
+
+      max-width: 220px;
+      border-radius: 12px;
+    }
   }
 
   &__container {
