@@ -2,15 +2,21 @@
   position: relative;
 
   width: 100%;
-  padding: 35px 0;
+  padding: 50px 0;
 
   font-size: $font-size-5;
 
   cursor: pointer;
 
   @include breakpoint($breakpoint-computer) {
+    padding: 32px 0;
     font-size: $font-size-7;
   }
+
+  @include breakpoint($breakpoint-laptop) {
+    padding: 26px 0;
+  }
+
 
   @include breakpoint($breakpoint-mobile-large) {
     font-size: 12px;
