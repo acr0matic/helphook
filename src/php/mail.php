@@ -32,11 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $email = $_POST['user_email'];
   $form_type = $_POST['form_type'];
 
-  if ($form_type == 'volunteer' || $form_type == 'help') {
+  if ($form_type == 'volunteer') {
     $age = $_POST['user_age'];
     $select = $_POST['user_select'];
 
     $content .= $age . $select;
+  }
+
+  else if ($form_type == 'help') {
+    $age = $_POST['user_age'];
+    $help = $_POST['user_help'];
+
+    $content .= $age . $help;
   }
 
 
@@ -75,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <b>Имя: </b> $name <br>
       <b>Почта: </b> <a href='mailto: $email'> $email </a> <br>
       <b>Возраст: </b> $age <br>
-      <b>Как могу помочь: </b> $select
+      <b>Как могу помочь: </b> $help
      </p>
     </html>
    ";
