@@ -16,6 +16,10 @@
   padding-top: 30px;
   padding-bottom: 35px;
 
+  @include breakpoint($breakpoint-tablet-large) {
+    padding-top: 130px;
+  }
+
   &__foreground {
     width: 100%;
 
@@ -41,7 +45,11 @@
       }
 
       @include breakpoint($breakpoint-mobile-large) {
-        display: none;
+        width: 100%;
+        max-width: 100%;
+
+        margin-bottom: 30px;
+        margin-left: 0;
       }
     }
   }

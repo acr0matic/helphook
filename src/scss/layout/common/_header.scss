@@ -7,9 +7,23 @@
 
   padding-top: 20px;
 
+  background-color: $palette-white;
+
   @include breakpoint($breakpoint-laptop) {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+
+  @include breakpoint($breakpoint-tablet-large) {
+    position: fixed;
+    z-index: $z-index-header;
+    top: 0;
+    left: 50%;
+
+    width: inherit;
+    max-width: inherit;
+
+    transform: translateX(-50%);
   }
 
   &__logo {
@@ -93,13 +107,16 @@
   }
 
   &__mobile {
-    position: absolute;
-    right: 15px;
-
     display: none;
 
-    @include breakpoint($breakpoint-mobile-large) {
+    @include breakpoint($breakpoint-tablet-large) {
       display: block;
+    }
+
+    @include breakpoint($breakpoint-mobile-large) {
+      position: absolute;
+      top: 35px;
+      right: 15px;
     }
   }
 }

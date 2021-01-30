@@ -44,6 +44,14 @@
     @include flex($justify: center);
   }
 
+  &__language {
+    display: none;
+
+    @include breakpoint($breakpoint-mobile-large) {
+      display: block;
+    }
+  }
+
   &__close {
     position: absolute;
     top: 50%;
