@@ -8,7 +8,7 @@ ymaps.ready(function () {
 
   map.behaviors.disable('scrollZoom');
 
-  fetch('../data/map.json')
+  fetch('../src/data/map.json')
     .then((response) => {
       return response.json();
     })
@@ -28,7 +28,7 @@ ymaps.ready(function () {
           balloonContentBody: address,
         },
           {
-            iconImageHref: '../img/icons/map__marker.svg',
+            iconImageHref: '../src/img/icons/map__marker.svg',
             iconImageSize: iconSize,
             iconLayout: 'default#image',
           }

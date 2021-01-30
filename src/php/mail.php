@@ -35,15 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($form_type == 'volunteer') {
     $age = $_POST['user_age'];
     $select = $_POST['user_select'];
-
-    $content .= $age . $select;
   }
 
   else if ($form_type == 'help') {
     $age = $_POST['user_age'];
     $help = $_POST['user_help'];
-
-    $content .= $age . $help;
   }
 
 
@@ -67,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Subject = $title;
     $mail->Body = $body;
 
-    // Проверяем отравленность сообщения
     $mail->send();
   }
 
@@ -120,5 +115,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->send();
   }
 
-  echo json_encode($content);
+  echo json_encode($message);
 }

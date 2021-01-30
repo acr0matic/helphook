@@ -28,6 +28,8 @@ forms.forEach(form => {
       formData.append('user_select', selectedValue);
       formData.append('form_type', formType);
 
+      console.log(formType);
+
       let response = await fetch(action, {
         method: 'POST',
         body: formData,
@@ -35,6 +37,7 @@ forms.forEach(form => {
 
       try {
         let result = await response.json();
+        console.log(result);
 
         if (/\/en/.test(window.location.href))
           formMessage.innerHTML = 'Thanks for the response interest to our project! We will contact you asap';
@@ -66,14 +69,8 @@ function InputValidation(inputs) {
   let isValide = false;
 
   inputs.forEach(field => {
-
     if (field.tagName !== 'UL') {
-      if (!field.value) {
-        field.classList.add('input-field--error')
-        isValide = false;
-      }
-
-      else isValide = true;
+      if (!field.value) field.classList.add('input-field--error');
     }
 
     else {
@@ -84,6 +81,20 @@ function InputValidation(inputs) {
     }
   });
 
+  var BreakException = {};
+  inputs.forEach(field => {
+    try {
+      isValide = field.classList.contains('input-field--error') ? false : true;
+
+      if (!isValide) throw BreakException;
+    }
+
+    catch (e) {
+      if (e !== BreakException) throw e;
+    }
+  });
+
+  console.log(isValide);
   return isValide;
 }
 
