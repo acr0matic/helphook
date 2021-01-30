@@ -17,12 +17,15 @@ ymaps.ready(function () {
         const element = data[key];
 
         let iconSize = [70, 70];
+        let address = element.address;
+
+        if (/\/en/.test(window.location.href)) address = element.address_en;
 
         if (window.matchMedia("(max-width: 768px)").matches) iconSize = [35, 35];
 
         var place = new ymaps.Placemark(
           element.coordinates, {
-          balloonContentBody: element.address,
+          balloonContentBody: address,
         },
           {
             iconImageHref: '../img/icons/map__marker.svg',
