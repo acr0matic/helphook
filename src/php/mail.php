@@ -3,7 +3,17 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
+// Проверяем отравленность сообщения
+function SendMail($mail, &$status)
+{
+  if ($mail->send())
+    $status = "Сообщение успешно отправлено";
+  else
+    $status =  "Сообщение не было отправлено. Причина ошибки: " . $mail->ErrorInfo;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
 
   // Настройки PHPMailer
   $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -18,36 +28,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'best-for-home-24'; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Username   = 'info@hookhelp.ru'; // Логин на почте
+  $mail->Password   = 'appleJack22@'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
-  $mail->setFrom('best-for-home-24@yandex.ru', 'Тестовая'); // от кого будет уходить письмо?
+  $mail->setFrom('info@hookhelp.ru', 'Кручок помощи'); // от кого будет уходить письмо?
 
   // Получатель письма
-  $mail->addAddress('main.acr0matic@gmail.com');
+  $mail->addAddress('hookhelp@yandex.ru');
 
   // Переменные
   $name = $_POST['user_name'];
   $email = $_POST['user_email'];
   $form_type = $_POST['form_type'];
+  $status = '';
 
   if ($form_type == 'volunteer') {
     $age = $_POST['user_age'];
     $select = $_POST['user_select'];
-  }
 
-  else if ($form_type == 'help') {
-    $age = $_POST['user_age'];
-    $help = $_POST['user_help'];
-  }
-
-
-  if ($form_type == 'volunteer') {
     // Формирование содержимого письма
     $title = "Поступила заявка 'Стать волонтером'";
     $body =
-   "
+      "
     <html>
      <p>
       Контактная информация: <br> <br>
@@ -63,14 +66,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Subject = $title;
     $mail->Body = $body;
 
-    $mail->send();
+    $mail_info;
+
+    SendMail($mail, $status);
   }
 
   if ($form_type == 'help') {
+    $age = $_POST['user_age'];
+    $help = $_POST['user_help'];
+
     // Формирование содержимого письма
     $title = "Поступила заявка 'Любая помощь'";
     $body =
-   "
+      "
     <html>
      <p>
       Контактная информация: <br> <br>
@@ -86,8 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Subject = $title;
     $mail->Body = $body;
 
-    // Проверяем отравленность сообщения
-    $mail->send();
+    SendMail($mail, $status);
   }
 
   if ($form_type == 'question') {
@@ -96,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Формирование содержимого письма
     $title = "Поступил вопрос";
     $body =
-   "
+      "
     <html>
      <p>
       Контактная информация: <br> <br>
@@ -111,9 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Subject = $title;
     $mail->Body = $body;
 
-    // Проверяем отравленность сообщения
-    $mail->send();
+    SendMail($mail, $status);
   }
 
-  echo json_encode($message);
+  echo json_encode($status);
 }

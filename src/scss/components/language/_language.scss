@@ -8,6 +8,7 @@
     border-radius: 12px;
     transition: all 0.15s ease;
 
+
     &--open {
       background-color: $palette-white;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -21,11 +22,18 @@
     @include flex();
     position: relative;
 
+    cursor: pointer;
     transition: all 0.15s ease;
 
     &--hide {
       visibility: hidden;
       opacity: 0;
+
+      &:hover {
+        .language__title {
+          color: $text-red;
+        }
+      }
     }
 
     &--visible {
@@ -35,12 +43,6 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
-    }
-
-    &:hover {
-      .language__title {
-        color: $text-red;
-      }
     }
   }
 
@@ -59,8 +61,8 @@
     @include flex($justify: center);
 
     position: absolute;
-    top: 20px;
-    right: 5px;
+    top: 4px;
+    right: -23px;
 
     width: 20px;
     height: 20px;

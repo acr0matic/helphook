@@ -28,16 +28,14 @@ forms.forEach(form => {
       formData.append('user_select', selectedValue);
       formData.append('form_type', formType);
 
-      console.log(formType);
-
-      let response = await fetch(action, {
-        method: 'POST',
-        body: formData,
-      });
-
       try {
-        let result = await response.json();
-        console.log(result);
+        let response = await fetch('php/mail.php', {
+          method: 'POST',
+          body: formData,
+        });
+
+        // let result = await response.json();
+        // console.log(result);
 
         if (/\/en/.test(window.location.href))
           formMessage.innerHTML = 'Thanks for the response interest to our project! We will contact you asap';
@@ -60,6 +58,7 @@ forms.forEach(form => {
       else
         formMessage.innerHTML = 'Вы ошиблись при вводе! Попробуйте снова.'
 
+      formMessage.classList.remove('form__info--accept');
       formMessage.classList.add('form__info--show', 'form__info--error');
     }
   };
@@ -94,7 +93,6 @@ function InputValidation(inputs) {
     }
   });
 
-  console.log(isValide);
   return isValide;
 }
 
